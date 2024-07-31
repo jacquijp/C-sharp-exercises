@@ -1,6 +1,6 @@
 ﻿//Space to practice IF through a BlackJack game as an example.
 
-int totalPlayer = 0;
+int totalPlayer = 21;
 int totalDealer = 15;
 string message = "";
 
