@@ -7,8 +7,7 @@ string name = "Jacqueline Jimenez";
 string originCity = "Guadalajara";
 var bloodType = "B positive";
 
-string presentationCard = $"Information of {name} \n Age: {age} years old. \n Height: {height} cm. \n Origin City: {originCity} . " +
-    $"\n Blood Type: {bloodType";
+string presentationCard = $"Information of {name} \n Age: {age} years old. \n Height: {height} cm. \n Origin City: {originCity}. " +
+    $"\n Blood Type: {bloodType}";
 
 Console.WriteLine(presentationCard);
-
