@@ -30,6 +30,7 @@ while (true)
                 Console.WriteLine("Select an option (number): ");
                 Console.WriteLine("1 - PLAY \n");
                 switchControl = Console.ReadLine();
+                i = i - 1;
                 break;
 
             case "1":
