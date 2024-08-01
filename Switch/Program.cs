@@ -1,4 +1,4 @@
-﻿//Space to practice switch through a BlackJack game as an example.
+﻿//Space to practice switch and do while through a BlackJack game as an example.
 
 using System.ComponentModel.Design;
 
@@ -18,7 +18,7 @@ while (true)
             Console.WriteLine("Welcome to \n BackJack!");
             Console.WriteLine("Select an option (number): ");
             Console.WriteLine("1 - PLAY");
-            string swtitchControl = Console.ReadLine();
+            switchControl = Console.ReadLine();
             break;
 
         case "1":
@@ -29,33 +29,36 @@ while (true)
                 totalPlayer = totalPlayer + num;
                 Console.WriteLine("Pick a cart");
                 Console.WriteLine($"You got: {num} ");
-                Console.WriteLine("Do you wish another card?");
-            } while (Console.ReadLine() == "Yes" ||
-            Console.ReadLine() == "yes"
-            || Console.ReadLine() == "yes");
+                Console.WriteLine("Do you wish another card? (Yes/No)");
+                string answer = Console.ReadLine();
+                if (answer.ToLower() != "yes")
+                {
+                    break;
+                }
+
+            } while (true);
+
             if (totalPlayer > totalDealer && totalPlayer < 22)
             {
                 message = "You won!! Congratulations nwn";
-                switchControl = "menu";
             }
             else if (totalPlayer >= 22)
             {
                 message = "You're over 21. You've lost";
-                switchControl = "menu";
-            }
-            else if (totalPlayer <= totalDealer)
-            {
-                message = "You lost";
-                switchControl = "menu";
             }
             else
             {
                 message = "invalid condition";
             }
             Console.WriteLine(message);
+
+            totalPlayer = 0;
+            totalDealer = 0;  
+            switchControl = "menu";
             break;
         default:
             Console.WriteLine("Type a valid value");
+            switchControl = "menu";
             break;
     }
 
