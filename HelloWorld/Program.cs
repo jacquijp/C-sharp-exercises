@@ -7,7 +7,7 @@
 //double sideB;
 //double result;
 
-//Declararion of varibales implicit
+//Declaration of variables implicit
 var sideA = 0.0;
 var sideB = 0.0;
 var result = 0.0;
